@@ -8,7 +8,7 @@
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
         crossorigin="anonymous">
-        
+
     <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
         integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" 
@@ -79,8 +79,30 @@
             </div>
         </nav>
 
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" id="add-new" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id='title'>Add Item </h4>
+      </div>
+      <div class="modal-body">
+       <input type="text" id="add-item" class="form-control" placeholder="Add new Item" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="display:none" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        <button type="button" style="display:none" id="delete" class="btn btn-warning">delete</button>
+        <button type="button" style="display:none" id="save" class="btn btn-secondary">Save Changes</button>
+        <button type="button"  id="add" class="btn btn-primary">Add new Item</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
         @yield('content')
     </div>
+
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
@@ -89,5 +111,6 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
         crossorigin="anonymous">
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/myjs.js') }}"></script>
 </body>
 </html>

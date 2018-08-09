@@ -7,15 +7,17 @@
              
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Panel title <a href="#" class=pull-right> <i class="fa fa-plus"></i></h3>
+                <h3 class="panel-title">Panel title 
+                <a href="#" class=pull-right data-toggle="modal" data-target=".bs-example-modal-lg"> <i class="fa fa-plus"></i></h3>
             </a></div>
             <div class="panel-body">
+            {{ csrf_field() }}
             <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Cras justo odio</li>
+                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Dapibus ac facilisis in</li>
+                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Morbi leo risus</li>
+                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Porta ac consectetur ac</li>
+                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Vestibulum at eros</li>
             </ul>
             </div>
         </div>
