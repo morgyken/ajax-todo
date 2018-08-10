@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
               return view('showme');
     }
+   
+    public function delete(Request $request){    
+              
+        return $request->all();     
+    }
 }

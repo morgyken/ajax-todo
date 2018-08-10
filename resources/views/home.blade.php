@@ -14,7 +14,10 @@
             {{ csrf_field() }}
             <ul class="list-group">
             @foreach ( $item as $items )
-                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">{{$items->item}}</li>
+                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">{{$items->item}}
+                <input type="hidden" id="item-id" value ="{{$items->id}}" />
+                </li>
+               
             @endforeach
             </ul>
             </div>

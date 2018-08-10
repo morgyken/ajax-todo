@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use DB;
 
+use App\ItemModel;
+
 class ListController extends Controller
 {
     public function index(){
@@ -27,5 +29,13 @@ class ListController extends Controller
 
        
     }
+
+     
+    public function delete(Request $request){    
+
+        ItemModel::where('id', $request->id) ->delete();              
+        return $request->all();     
+    }
+
 }
 
