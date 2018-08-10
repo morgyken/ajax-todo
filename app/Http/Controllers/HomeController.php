@@ -33,11 +33,7 @@ class HomeController extends Controller
 
     public function show()
     {
-              return view('showme');
+     return view('showme');
     }
-   
-    public function delete(Request $request){    
-              
-        return $request->all();     
-    }
+  
 }

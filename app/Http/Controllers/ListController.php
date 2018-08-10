@@ -37,5 +37,15 @@ class ListController extends Controller
         return $request->all();     
     }
 
+    public function update(Request $request){    
+
+        $item = ItemModel::find($request->id);    
+        $item->item =$request->item;
+        
+        $item->save();
+        return $request->all();     
+    }
+
+
 }
 

@@ -16,6 +16,7 @@ Route::get('/','ListController@index');
 
 Route::post('list','ListController@create')->name('create');
 Route::post('delete', 'ListController@delete')->name('delete');
+Route::post('update', 'ListController@update')->name('update');
 
 Auth::routes();
 

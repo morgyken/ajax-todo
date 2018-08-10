@@ -32,13 +32,23 @@ $(document).ready(function(){
         
         });
 
-
         $('#delete').click(function(event)
         {
             var id = $('#id').val();
 
             $.post('delete', {'id': id, '_token': $('input[name=_token]').val()}, function(data){
                $('.panel-body').load(location.href + ' .panel-body') //div refresh 
+              });
+        });
+
+        $('#save').click(function(event)
+        {
+            var id = $('#id').val();
+            var text = $('#add-item').val();
+
+            $.post('update', {'id': id,'item': text ,'_token': $('input[name=_token]').val()}, function(data){
+             $('.panel-body').load(location.href + ' .panel-body') //div refresh 
+                //console.log(data);
               });
         });
         
