@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\ItemModel;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $item = ItemModel::all();
+
+        return view('home',['item' => $item]);
+    }
+
+
+    public function show()
+    {
+              return view('showme');
     }
 }

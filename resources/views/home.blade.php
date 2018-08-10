@@ -13,11 +13,9 @@
             <div class="panel-body">
             {{ csrf_field() }}
             <ul class="list-group">
-                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Cras justo odio</li>
-                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Dapibus ac facilisis in</li>
-                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Morbi leo risus</li>
-                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Porta ac consectetur ac</li>
-                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">Vestibulum at eros</li>
+            @foreach ( $item as $items )
+                <li class="list-group-item myitem" data-toggle="modal" data-target=".bs-example-modal-lg">{{$items->item}}</li>
+            @endforeach
             </ul>
             </div>
         </div>

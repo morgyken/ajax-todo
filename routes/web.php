@@ -13,8 +13,11 @@
 
 Route::get('/','ListController@index');
 
-Route::post('/','ListController@create');
+
+Route::post('list','ListController@create')->name('create');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/show', 'HomeController@show')->name('show');

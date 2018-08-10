@@ -17,7 +17,7 @@ class ListController extends Controller
       
         DB::table('item_models')->insert(
             [              
-                'item' => $request->text,
+                'item' => $request->item,
                 
                 'created_at' =>\Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateTimeString(),

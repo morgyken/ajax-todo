@@ -93,8 +93,8 @@
       <div class="modal-footer">
         <button type="button" style="display:none" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
         <button type="button" style="display:none" id="delete" class="btn btn-warning">delete</button>
-        <button type="button" style="display:none" id="save" class="btn btn-secondary">Save Changes</button>
-        <button type="button"  id="add" class="btn btn-primary">Add new Item</button>
+        <button type="button" style="display:none" id="save"  class="btn btn-secondary">Save Changes</button>
+        <button type="button"  id="add" class="btn btn-primary" data-dismiss="modal"  >Add new Item</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
