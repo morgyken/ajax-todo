@@ -1,8 +1,9 @@
 $(document).ready(function(){
     $(document).on('click','.myitem', function(event)
     {
-            var text = $(this).text();
+            var text = $.trim($(this).text());
             var id = $(this).find('#item-id').val();
+        
             $('#add-item').val(text);
             $('.modal-title').text('Edit Item');
             $('#delete').show('300');
@@ -17,6 +18,7 @@ $(document).ready(function(){
             $('#add-item').val("");
             $('.modal-title').text('Add New Item');
             $('#delete').hide('300');
+        
             $('#save').hide('300');
             $('#add').show('300');
         });
@@ -44,7 +46,7 @@ $(document).ready(function(){
         $('#save').click(function(event)
         {
             var id = $('#id').val();
-            var text = $('#add-item').val();
+            var text = $.trim ($('#add-item').val());
 
             $.post('update', {'id': id,'item': text ,'_token': $('input[name=_token]').val()}, function(data){
              $('.panel-body').load(location.href + ' .panel-body') //div refresh 
